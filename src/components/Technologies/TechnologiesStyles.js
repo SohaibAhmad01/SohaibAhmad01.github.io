@@ -30,24 +30,25 @@ export const MainImage = styled.img`
 export const List = styled.ul`
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  margin: 3rem 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
   
   @media ${props => props.theme.breakpoints.lg}{
-    margin: 64px 0;
+    margin: 2rem 0;
   }
 
   @media ${props => props.theme.breakpoints.md}{
-    margin: 64px 0;
-    gap: 24px;
-    grid-template-columns: 1fr 1fr;
+    margin: 2rem 0;
+    gap: 1.6rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   
   @media ${props => props.theme.breakpoints.sm}{
-    display: flex;
-    flex-direction: column;
-    margin: 32px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    margin: 2rem 0;
   }
 `
 
@@ -57,54 +58,53 @@ export const ListContainer = styled.div`
 
   @media ${props => props.theme.breakpoints.sm}{
     display: flex;
-    margin-left: 18px;
+    margin-left: 0;
   }
 `
 
 export const ListTitle = styled.h4`
   font-weight: 700;
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 1.9rem;
+  line-height: 1.3;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
 
 @media ${props => props.theme.breakpoints.md}{
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.8rem;
+  line-height: 1.3;
 }
 
 @media ${props => props.theme.breakpoints.sm}{
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1.7rem;
+  line-height: 1.3;
   letter-spacing: 0.02em;
   margin-bottom: 4px;
 }
 `
 
 export const ListParagraph = styled.p`
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 1.65;
 
   @media ${props => props.theme.breakpoints.md}{
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1.5rem;
+    line-height: 1.6;
   }
 
   @media ${props => props.theme.breakpoints.sm}{
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 1.45rem;
+    line-height: 1.6;
   }
 `
 
 export const ListItem = styled.li`
-  max-width: 320px;
+  max-width: none;
   display: flex;
   flex-direction: column;
 
   @media ${props => props.theme.breakpoints.sm}{
-    margin-bottom: 14px;
-    max-width: 320px;
-    flex-direction: row;
+    max-width: none;
+    flex-direction: column;
   }
 `
 

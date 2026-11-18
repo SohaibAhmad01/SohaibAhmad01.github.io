@@ -1,0 +1,29 @@
+[
+  {
+    "role": "Senior Software Engineer – Full Stack",
+    "company": "Crymzee Networks Pvt. Ltd.",
+    "location": "Lahore",
+    "start": "June 2024",
+    "end": "Present",
+    "highlights": [
+      "Architect and maintain scalable REST APIs with Python, Django, and Django REST Framework for Next.js and React applications.",
+      "Improve frontend performance and SEO with server-side rendering, static generation, and API caching.",
+      "Build Stripe and PayPal payment flows with webhooks and PCI-compliant transaction handling, alongside OAuth 2.0, JWT, social login, and role-based access control.",
+      "Tune PostgreSQL schemas, indexes, and queries for high-volume workloads; build live features with Django Channels and WebSockets.",
+      "Use Celery and Redis for background work, and Docker and CI/CD pipelines for consistent deployments."
+    ]
+  },
+  {
+    "role": "Software Engineer (Backend)",
+    "company": "Gateway Technologies",
+    "location": "Lahore",
+    "start": "September 2022",
+    "end": "April 2024",
+    "highlights": [
+      "Contributed to enterprise backend architecture with a focus on availability and horizontal scalability.",
+      "Reduced infrastructure costs through improved resource use and system efficiency.",
+      "Translated business needs into technical specifications with clients, designers, and QA teams.",
+      "Supported maintainable code through reviews, feedback, and engineering best practices."
+    ]
+  }
+]

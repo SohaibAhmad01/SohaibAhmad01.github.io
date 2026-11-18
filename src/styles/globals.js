@@ -8,12 +8,11 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    user-select: none;
   }
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-
+    scroll-padding-top: 8rem;
   }
   body {
     font-family: ${props => props.theme.fonts.main};
@@ -21,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${props => props.theme.colors.bodyBgColor};
     color: ${props => props.theme.colors.primary1};
     cursor: default;
+    overflow-x: hidden;
 
   }
   h1,h2,h3,h4,h5,h6{
@@ -30,6 +30,18 @@ const GlobalStyles = createGlobalStyle`
   }
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${props => props.theme.fonts.title};
+  }
+  .hero-image {
+    width: min(100%, 44rem);
+    margin: 0 auto;
+  }
+  .BgAnimation__svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media screen and (max-width: 1024px) {
+    .hero-image { display: none; }
   }
   a {
     color: ${props => props.theme.colors.primary1};
@@ -91,8 +103,13 @@ const GlobalStyles = createGlobalStyle`
   
   .project-card{
     display: grid;
-    grid-template-rows: auto auto 1fr auto auto;
-    padding-bottom: 2.5rem;
+    grid-template-rows: auto auto auto 1fr auto;
+    align-self: stretch;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    padding-bottom: 1.6rem;
     height: 100%;
     background-color: ${props => props.theme.colors.bgContrast};
     box-shadow: 0 0 3px -1px ${props => props.theme.colors.shadow};
@@ -101,6 +118,10 @@ const GlobalStyles = createGlobalStyle`
       width: 100%;
       display: block;
     }
+  }
+
+  @media screen and (max-width: 640px) {
+    .project-card { border-radius: 10px; }
   }
 
 `;

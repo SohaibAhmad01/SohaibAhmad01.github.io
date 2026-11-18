@@ -4,99 +4,73 @@ export const Section = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex" };
   flex-direction: ${(props) => props.row ? "row" : "column" };
   align-items: ${(props) => props.center ? "center" : "" };
-  padding: ${(props) => props.nopadding ? "0" : "0 48px 0" } ;
+  width: 100%;
+  padding: ${(props) => props.nopadding ? "0" : "clamp(5.5rem, 6vw, 7rem) clamp(16px, 4vw, 40px)" };
   margin: 0 auto;
-  max-width: 1040px;
-  box-sizing: content-box;
+  max-width: 1120px;
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
 
   @media ${(props) => props.theme.breakpoints.lg} {
-    padding: 0 48px 0;
+    grid-template-columns: ${(props) => props.grid ? "1fr" : "unset"};
+    padding: ${(props) => props.nopadding ? "0" : "clamp(4.5rem, 6vw, 5.5rem) 24px"};
     flex-direction: column;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
-
-    width: calc(100vw - 32px);
+    padding: ${(props) => props.nopadding ? "0" : "4rem 16px"};
     flex-direction: column;
   }
 `
 
 export const PageTitle = styled.h1`
-  font-weight: 800;
-  font-size: ${(props) => props.main ? '65px' : '56px'};
-  line-height: ${(props) => props.main ? '72px' : '56px'};
-  width: max-content;
+  font-weight: 700;
+  font-size: ${(props) => props.main ? 'clamp(3.2rem, 4.8vw, 4.6rem)' : 'clamp(2.8rem, 3.5vw, 4rem)'};
+  line-height: 1.12;
+  width: fit-content;
   max-width: 100%;
-  margin-bottom: 16px;
-  padding: ${(props) => props.main ? '30px 0 16px' : '0'};
+  margin-bottom: 1.2rem;
+  padding: ${(props) => props.main ? '2rem 0 1rem' : '0'};
 
   @media ${props => props.theme.breakpoints.md}{
-    font-size: ${(props) => props.main ? '56px' : '48px'};
-    line-height: ${(props) => props.main ? '56px' : '48px'};
-    margin-bottom: 12px;
-    padding: ${(props) => props.main ? '40px 0 12px' : '0'};
-  }
-
-  @media ${props => props.theme.breakpoints.sm}{
-    font-size: 32px;
-    line-height: 40px;
-    font-size: ${(props) => props.main ? '26px' : '32px'};
-    line-height: ${(props) => props.main ? '32px' : '40px'};
-    margin-bottom: 8px;
-    padding: ${(props) => props.main ? '16px 0 8px' : '0'};
-    max-width: 100%;
+    font-size: ${(props) => props.main ? 'clamp(3rem, 6vw, 4rem)' : 'clamp(2.6rem, 4vw, 3.2rem)'};
   }
 `
 
 export const SectionTitle = styled.h2`
-  font-weight: 800;
-  font-size: ${(props) => props.main ? '65px' : '56px'};
-  line-height: ${(props) => props.main ? '72px' : '56px'};
-  width: max-content;
+  font-weight: 700;
+  font-size: ${(props) => props.main ? 'clamp(3.2rem, 4.8vw, 4.6rem)' : 'clamp(2.7rem, 3.3vw, 3.6rem)'};
+  line-height: 1.15;
+  width: fit-content;
   max-width: 100%;
-  margin-bottom: 16px;
-  padding: ${(props) => props.main ? '30px 0 16px' : '0'};
+  margin-bottom: 1.2rem;
+  padding: ${(props) => props.main ? '2rem 0 1rem' : '0'};
 
   @media ${props => props.theme.breakpoints.md}{
-    font-size: ${(props) => props.main ? '56px' : '48px'};
-    line-height: ${(props) => props.main ? '56px' : '48px'};
-    margin-bottom: 12px;
-    padding: ${(props) => props.main ? '40px 0 12px' : '0'};
-  }
-
-  @media ${props => props.theme.breakpoints.sm}{
-    font-size: 32px;
-    line-height: 40px;
-    font-size: ${(props) => props.main ? '26px' : '32px'};
-    line-height: ${(props) => props.main ? '32px' : '40px'};
-    margin-bottom: 8px;
-    padding: ${(props) => props.main ? '16px 0 8px' : '0'};
-    max-width: 100%;
+    font-size: ${(props) => props.main ? 'clamp(3rem, 6vw, 4rem)' : 'clamp(2.5rem, 4vw, 3.2rem)'};
   }
 `
 
 export const SectionText = styled.p`
   max-width: 800px;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 1.8rem;
+  line-height: 1.65;
   font-weight: 300;
-  padding-bottom: 3.6rem;
+  padding-bottom: 2.4rem;
 
   @media ${(props) => props.theme.breakpoints.md} {
-    max-width: 670px;
-    font-size: 20px;
-    line-height: 32px;
-    padding-bottom: 24px;
+    max-width: 100%;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    padding-bottom: 2rem;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 16px;
-    line-height: 24px;
-    padding-bottom: 1.5rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding-bottom: 1.6rem;
   }
 `
 
@@ -110,7 +84,7 @@ export const SectionDivider = styled.div`
     'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
     'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
 
-    margin: ${(props) => props.divider ? "4rem 0" : "" };
+    margin: ${(props) => props.divider ? "0 0 1.6rem" : "" };
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 48px;
@@ -120,7 +94,7 @@ export const SectionDivider = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 32px;
     height: 2px;
-    margin: 2rem 0;
+    margin: 0 0 1.4rem;
   }
 `
 export const SectionSubText = styled.p`

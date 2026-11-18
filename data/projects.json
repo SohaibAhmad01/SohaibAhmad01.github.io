@@ -1,0 +1,155 @@
+[
+  {
+    "id": "zbook",
+    "title": "Zbook",
+    "subtitle": "Service booking and AI avatar platform",
+    "client": "Crymzee Network",
+    "period": "January 2026 – Present",
+    "description": "A service booking platform for providers, shop owners, and customers, with availability management and AI-powered avatars.",
+    "highlights": [
+      "Built role-based booking and complex provider availability workflows.",
+      "Integrated ElevenLabs and D-ID to create AI twins using user-specific voice and imagery.",
+      "Added Elasticsearch fuzzy search, Stripe Connect multi-party payments, and Celery background jobs."
+    ],
+    "tags": ["Django", "Next.js", "Elasticsearch", "Stripe Connect", "Celery", "ElevenLabs", "D-ID"],
+    "order": 1
+  },
+  {
+    "id": "capture-pro",
+    "title": "Capture Pro",
+    "subtitle": "Photo studio booking",
+    "client": "Crymzee Network",
+    "period": "March 2026 – Present",
+    "description": "A booking management system that helps photo studios manage services and customer bookings.",
+    "highlights": [
+      "Designed secure REST APIs and role-based access for studio service management.",
+      "Integrated Stripe and Apple Pay for online payments.",
+      "Connected Twilio SMS for booking lifecycle updates and announcements."
+    ],
+    "tags": ["Django", "REST APIs", "Stripe", "Apple Pay", "Twilio"],
+    "order": 2
+  },
+  {
+    "id": "3d-printer-management",
+    "title": "3D Printer Management",
+    "subtitle": "IoT fleet management and live monitoring",
+    "client": "Crymzee Networks",
+    "period": "September 2025 – Present",
+    "description": "A fleet management platform for printers, orders, customers, locations, and filament, with role-aware tools and live device status.",
+    "highlights": [
+      "Built a Next.js 14 interface with granular permissions across more than 10 resource types.",
+      "Implemented WebSocket camera streaming, temperature charts, and live print-job status tracking.",
+      "Created manual and automatic print workflows, priority queues, filament tracking, macros, and actionable notifications."
+    ],
+    "tags": ["Next.js 14", "WebSockets", "IoT", "ApexCharts", "RBAC"],
+    "order": 3
+  },
+  {
+    "id": "umeedbazzar",
+    "title": "UmeedBazzar",
+    "subtitle": "Multi-vendor e-commerce",
+    "client": "Crymzee Network",
+    "url": "https://www.umeedbazzar.com/",
+    "description": "A multi-vendor e-commerce platform with secure transaction tracking and role-based access for marketplace users.",
+    "highlights": [
+      "Connected Stripe, PayPal, and Shippo for payment, shipping, webhook, and order workflows.",
+      "Built SEO-friendly storefronts with Next.js SSR and live order updates and chat with Django Channels.",
+      "Deployed Docker services with Celery and Redis for background processing and availability."
+    ],
+    "tags": ["Django", "Next.js SSR", "Stripe", "PayPal", "Shippo", "Docker", "Celery", "Redis"],
+    "order": 4
+  },
+  {
+    "id": "kurd-fit",
+    "title": "KurdFit",
+    "subtitle": "Multilingual fitness and wellness",
+    "client": "Crymzee Network",
+    "period": "February 2025 – August 2026",
+    "description": "A bilingual English and Kurdish fitness platform with localized content, RTL/LTR layouts, guided exercise, and personalized plans.",
+    "highlights": [
+      "Built exercise discovery with muscle and equipment filters, video guidance, and health-condition safety flags.",
+      "Created custom and expert workout plans, progress tracking, streaks, badges, and analytics.",
+      "Added trainer guidance subscriptions with certified coach feedback and tiered Stripe billing with webhook-based access control."
+    ],
+    "tags": ["Django", "Next.js", "Localization", "RTL", "Stripe", "Fitness"],
+    "order": 5
+  },
+  {
+    "id": "trish",
+    "title": "Trish App",
+    "subtitle": "CRM intelligence and automation",
+    "client": "Crymzee Networks Pvt. Ltd.",
+    "period": "March 2025 – September 2025",
+    "url": "https://www.iknowtrish.com/",
+    "description": "A CRM intelligence platform that brings customer data together and turns interactions into practical sales insights.",
+    "highlights": [
+      "Ingested and normalized data from Salesforce, HubSpot, and other CRM platforms through secure APIs.",
+      "Developed sentiment analysis for customer interactions and lead insights.",
+      "Integrated OpenAI recommendations for personalized sales plays and engagement guidance."
+    ],
+    "tags": ["Django", "REST APIs", "OpenAI", "CRM", "Sentiment analysis"],
+    "order": 6
+  },
+  {
+    "id": "drive-talk",
+    "title": "Drive Talk",
+    "subtitle": "Real-time social communication",
+    "client": "Crymzee Networks Pvt. Ltd.",
+    "period": "June 2025 – December 2025",
+    "url": "https://drivetalk.club/api/",
+    "description": "An API-first social platform backend with role-based access, real-time communication, and reliable friend management.",
+    "highlights": [
+      "Built real-time chat and live interactions with Django Channels and WebSockets.",
+      "Implemented friend requests, accept/reject flows, and blocking with transactional safety.",
+      "Optimized PostgreSQL indexes and queries for concurrent workloads."
+    ],
+    "tags": ["Python", "Django REST Framework", "Django Channels", "WebSockets", "PostgreSQL"],
+    "order": 7
+  },
+  {
+    "id": "flow-it",
+    "title": "Flow It",
+    "subtitle": "Competition and activity tracking",
+    "client": "Crymzee Networks Pvt. Ltd.",
+    "period": "July 2025 – January 2026",
+    "url": "https://api.flowitapp.co/",
+    "description": "A competition platform backend for activity challenges, scoring, and live leaderboards.",
+    "highlights": [
+      "Designed the Django backend and APIs for competition participation and activity tracking.",
+      "Aggregated steps and calories to power challenge progress and rankings.",
+      "Built competition rules, score calculations, and live WebSocket updates."
+    ],
+    "tags": ["Python", "Django", "REST APIs", "WebSockets", "Leaderboards"],
+    "order": 8
+  },
+  {
+    "id": "the-showroom",
+    "title": "The Showroom",
+    "subtitle": "Fashion marketplace for Saudi Arabia",
+    "client": "Crymzee Network",
+    "period": "March 2025 – Present",
+    "url": "https://theshowroomofficial.com/",
+    "description": "A Saudi fashion marketplace with dedicated buyer, seller, and admin experiences.",
+    "highlights": [
+      "Integrated Moyassar payments for cards and Apple Pay, including disputed-payment workflows.",
+      "Developed Celery-based seller payouts using bank details for accurate settlements."
+    ],
+    "tags": ["Django", "Marketplace", "Moyassar", "Apple Pay", "Celery"],
+    "order": 9
+  },
+  {
+    "id": "usa-erp",
+    "title": "USA ERP System",
+    "subtitle": "Enterprise resource planning",
+    "client": "Gateway Technologies",
+    "url": "https://degree.usa.edu.pk/",
+    "description": "An ERP implementation connecting university departments and improving finance, supply chain, and reporting workflows.",
+    "highlights": [
+      "Led end-to-end implementation and integration across departments, delivering on schedule and budget.",
+      "Configured and optimized finance and supply chain modules to improve operational efficiency and data accuracy.",
+      "Managed data migration and integrations with other enterprise applications."
+    ],
+    "tags": ["ERP", "Finance", "Supply chain", "Data migration", "Integrations"],
+    "order": 10
+  }
+]

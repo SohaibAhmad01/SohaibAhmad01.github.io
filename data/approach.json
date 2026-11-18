@@ -1,0 +1,22 @@
+[
+  {
+    "number": "01",
+    "title": "Start with the real workflow",
+    "description": "Clarify the user roles, business rules, and edge cases first, then turn them into focused product and API requirements."
+  },
+  {
+    "number": "02",
+    "title": "Build a dependable foundation",
+    "description": "Shape the data model, permissions, and API boundaries to keep the system secure, understandable, and ready to scale."
+  },
+  {
+    "number": "03",
+    "title": "Connect the moving parts",
+    "description": "Bring payments, search, AI services, and real-time features together with webhooks and background jobs where they fit."
+  },
+  {
+    "number": "04",
+    "title": "Ship, measure, improve",
+    "description": "Deliver through Docker and CI/CD workflows, then improve performance and resource use as real product needs become clear."
+  }
+]

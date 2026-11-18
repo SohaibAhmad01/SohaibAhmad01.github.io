@@ -6,6 +6,65 @@ export const ImgContainer = styled.figure`
   overflow: hidden;
 `
 
+export const ProjectVisual = styled.div`
+  min-height: clamp(145px, 16vw, 180px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.6rem, 2.2vw, 2.2rem);
+  color: #fff;
+  background: linear-gradient(135deg, ${props => props.theme.colors.accent1}, ${props => props.theme.colors.background2} 70%, #13adc7);
+`;
+
+export const ProjectKicker = styled.span`
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.9;
+`;
+
+export const ProjectVisualTitle = styled.span`
+  max-width: 28rem;
+  font-family: ${props => props.theme.fonts.title};
+  font-size: clamp(2.2rem, 2.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+`;
+
+export const ProjectBody = styled.div`
+  padding: 0 1.8rem;
+`;
+
+export const ProjectMeta = styled.p`
+  margin-top: -0.6rem;
+  padding: 0 1.8rem;
+  font-size: 1.25rem;
+  opacity: 0.65;
+`;
+
+export const ProjectHighlights = styled.ul`
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.4rem 0;
+
+  li {
+    list-style: disc;
+    margin-left: 1.8rem;
+    font-size: 1.35rem;
+    line-height: 1.55;
+  }
+`;
+
+export const ProjectLink = styled.a`
+  display: inline-flex;
+  margin-top: 0.6rem;
+  color: ${props => props.theme.colors.accent1};
+  font-size: 1.45rem;
+  font-weight: 700;
+  text-decoration: underline;
+`;
+
 export const Picture = styled.picture`
   display: block;
   position: relative;
@@ -26,31 +85,31 @@ export const TitleContent = styled.div`
   padding: 0 15px;
   z-index: 20;
   width: 100%;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 `;
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   color: ${props => props.theme.colors.primary1};
   background: none;
-  padding: 2rem 0 .5rem;
-  font-size: ${(props) => props.title ? '3rem' : '2rem'};
+  padding: 1.5rem 0 .5rem;
+  font-size: ${(props) => props.title ? '2rem' : '1.8rem'};
   -webkit-text-fill-color: unset;
   -webkit-background-clip: unset;
 `;
 
 export const CardInfo = styled.p`
   width: 100%;
-  padding: 0 15px;
-  line-height: 24px;
+  font-size: 1.45rem;
+  line-height: 1.6;
 `;
 
 export const ExternalLinks = styled.a`
   display: inline-flex;
   align-items: center;
-  font-size: 1.6rem;
-  padding: .75rem 1rem;
+  font-size: 1.4rem;
+  padding: .7rem 1rem;
   background-image: linear-gradient(270deg,${props => props.theme.colors.background2} 0%, ${props => props.theme.colors.accent1} 100%);
   color: #fefefe;
   transition-duration: 0.3s;
@@ -62,22 +121,25 @@ export const ExternalLinks = styled.a`
   
   &.link-to{
     margin: auto;
-    min-height: 40px;
-    max-width: 160px;
+    min-height: 44px;
+    max-width: max-content;
+    padding: 1rem 1.6rem;
   }
 `;
 
 export const TagList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 15px;
+  gap: 0.6rem;
+  padding: 1rem 1.5rem;
 `
 
 export const Tag = styled.li`
-  font-size: 1.5rem;
-  opacity: 0.75;
-  text-decoration: underline;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: ${props => props.theme.colors.bodyBgColor};
+  font-size: 1.15rem;
+  opacity: 0.82;
 `
 
 export const Button = styled.button`

@@ -1,91 +1,66 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import {motion} from 'framer-motion';
 import {
-  Button,
   CardInfo,
   HeaderThree,
-  PictureImg,
-  Picture,
   Hr,
-  ImgContainer,
+  ProjectBody,
+  ProjectHighlights,
+  ProjectKicker,
+  ProjectLink,
+  ProjectMeta,
+  ProjectVisual,
+  ProjectVisualTitle,
   Tag,
   TagList,
   TitleContent,
-} from "./CardStyles";
-import { BsPlusCircleFill } from "react-icons/bs";
-import ProjectModal from "../Modal/ProjectModal";
+} from './CardStyles';
 
 const variants = {
-  pageInitial: {
-    opacity: 0,
-    scale: 0.5,
-  },
-  pageAnimate: {
-    opacity: 1,
-    scale: 1,
-  },
-  pageExit: {
-    opacity: 0,
-    scale: 0.5,
-  },
+  pageInitial: {opacity: 0, y: 16},
+  pageAnimate: {opacity: 1, y: 0},
 };
 
-const ProjectCard = ({ item }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => setIsOpen(true);
-  const toggleModal = () => setIsOpen(!isOpen);
-
-  const { title, description, tags, image, imageWebp, images } =
-    item;
-
-  return (
-    <motion.div
-      key={title}
-      className="project-card"
-      layout
-      initial="pageInitial"
-      animate="pageAnimate"
-      variants={variants}
-      transition={{ type: "tween" }}
-    >
-      <ImgContainer>
-        <Picture>
-          <source srcSet={imageWebp} type="image/webp" />
-          <PictureImg src={image} alt={title} />
-        </Picture>
-
-        <Button
-          type="button"
-          aria-label="Open Project Gallery in a modal window"
-          onClick={openModal}
-        >
-          <BsPlusCircleFill />
-        </Button>
-        <ProjectModal
-          isOpen={isOpen}
-          toggleModal={toggleModal}
-          title={title}
-          images={images}
-        />
-      </ImgContainer>
-      <TitleContent>
-        <HeaderThree title>{title}</HeaderThree>
-        <Hr />
-      </TitleContent>
-      <CardInfo className="card-info">{description}</CardInfo>
-      <div className="card-footer">
-        <TitleContent style={{ marginTop: "20px" }}>
-          <b>Stack</b>
-        </TitleContent>
-        <TagList>
-          {tags.map((t, i) => {
-            return <Tag key={i}>{t}</Tag>;
-          })}
-        </TagList>
-      </div>
-    </motion.div>
-  );
-};
+const ProjectCard = ({item}) => (
+  <motion.article
+    className="project-card"
+    initial="pageInitial"
+    animate="pageAnimate"
+    variants={variants}
+    transition={{type: 'tween', duration: 0.35}}
+  >
+    <ProjectVisual>
+      <ProjectKicker>{item.client}</ProjectKicker>
+      <ProjectVisualTitle>{item.title}</ProjectVisualTitle>
+    </ProjectVisual>
+    <TitleContent>
+      <HeaderThree title>{item.subtitle}</HeaderThree>
+      <Hr />
+    </TitleContent>
+    {(item.period || item.url) && (
+      <ProjectMeta>
+        {item.period}{item.period && item.url ? ' · ' : ''}
+        {item.url ? 'Project website' : ''}
+      </ProjectMeta>
+    )}
+    <ProjectBody>
+      <CardInfo>{item.description}</CardInfo>
+      <ProjectHighlights>
+        {item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+      </ProjectHighlights>
+      {item.url && (
+        <ProjectLink href={item.url} target="_blank" rel="noopener noreferrer">
+          Visit project ↗
+        </ProjectLink>
+      )}
+    </ProjectBody>
+    <div className="card-footer">
+      <TitleContent style={{marginTop: '1.6rem'}}><b>Stack</b></TitleContent>
+      <TagList>
+        {item.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+      </TagList>
+    </div>
+  </motion.article>
+);
 
 export default ProjectCard;

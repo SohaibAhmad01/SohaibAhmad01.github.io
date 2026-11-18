@@ -1,0 +1,15 @@
+{
+  "name": "Sohaib Ahmad",
+  "portrait": "/images/sohaib-ahmad.jpg",
+  "location": "Lahore, Pakistan",
+  "email": "sohaibshafique303@gmail.com",
+  "phone": "+923117740460",
+  "phoneDisplay": "0311 7400460",
+  "linkedin": "https://www.linkedin.com/in/sohaib-ahmad01/",
+  "github": "https://github.com/SohaibAhmad01",
+  "websiteUrl": "https://sohaibahmad01.github.io/",
+  "siteDescription": "Senior Full Stack Software Engineer in Lahore building scalable web applications, APIs, and real-time systems with Python, Django, and Next.js.",
+  "role": "Senior Full Stack Software Engineer",
+  "experienceYears": "4+",
+  "summary": "Full Stack Software Engineer with 4+ years of experience building scalable web applications with Python, Django, and Next.js. I design high-performance REST APIs, real-time systems, and cloud-ready services, and take products from architecture through deployment. My work spans payments, search, AI integrations, and responsive user experiences."
+}

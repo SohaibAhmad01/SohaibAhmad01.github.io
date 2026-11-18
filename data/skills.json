@@ -1,0 +1,22 @@
+[
+  {
+    "category": "Backend engineering",
+    "skills": ["Python", "Django", "Django REST Framework", "Django Channels", "Celery", "Redis", "REST APIs", "API gateways", "Microservices", "JWT", "OAuth 2.0", "WebSockets"]
+  },
+  {
+    "category": "Frontend",
+    "skills": ["JavaScript", "TypeScript", "React", "Next.js", "SSR", "SSG", "HTML5", "CSS3", "Redux", "Context API", "Responsive design"]
+  },
+  {
+    "category": "Data and search",
+    "skills": ["PostgreSQL", "Query optimization", "Database indexing", "Elasticsearch", "Fuzzy search", "ORM optimization", "Data migrations"]
+  },
+  {
+    "category": "Cloud and delivery",
+    "skills": ["Docker", "Git", "GitHub Actions", "CI/CD", "AWS", "Heroku", "Linux"]
+  },
+  {
+    "category": "Integrations and systems",
+    "skills": ["OpenAI", "ElevenLabs", "D-ID", "Stripe", "PayPal", "Stripe Connect", "Twilio", "Apple Pay", "Payment systems", "Real-time systems", "System design", "High availability", "Sentiment analysis", "Agile"]
+  }
+]
