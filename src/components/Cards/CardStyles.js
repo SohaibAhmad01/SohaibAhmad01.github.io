@@ -65,6 +65,12 @@ export const ProjectLink = styled.a`
   text-decoration: underline;
 `;
 
+export const ProjectLinks = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+`;
+
 export const Picture = styled.picture`
   display: block;
   position: relative;

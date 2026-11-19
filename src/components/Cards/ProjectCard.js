@@ -8,6 +8,7 @@ import {
   ProjectHighlights,
   ProjectKicker,
   ProjectLink,
+  ProjectLinks,
   ProjectMeta,
   ProjectVisual,
   ProjectVisualTitle,
@@ -37,10 +38,10 @@ const ProjectCard = ({item}) => (
       <HeaderThree title>{item.subtitle}</HeaderThree>
       <Hr />
     </TitleContent>
-    {(item.period || item.url) && (
+    {(item.period || item.url || item.links?.length > 0) && (
       <ProjectMeta>
-        {item.period}{item.period && item.url ? ' · ' : ''}
-        {item.url ? 'Project website' : ''}
+        {item.period}{item.period && (item.url || item.links?.length > 0) ? ' · ' : ''}
+        {item.url ? 'Project website' : item.links?.length > 0 ? 'Project links' : ''}
       </ProjectMeta>
     )}
     <ProjectBody>
@@ -48,10 +49,18 @@ const ProjectCard = ({item}) => (
       <ProjectHighlights>
         {item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
       </ProjectHighlights>
-      {item.url && (
-        <ProjectLink href={item.url} target="_blank" rel="noopener noreferrer">
-          Visit project ↗
-        </ProjectLink>
+      {(item.url || item.links?.length > 0) && (
+        <ProjectLinks>
+          {item.links?.length > 0 ? item.links.map((link) => (
+            <ProjectLink key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
+              {link.label} ↗
+            </ProjectLink>
+          )) : (
+            <ProjectLink href={item.url} target="_blank" rel="noopener noreferrer">
+              Visit project ↗
+            </ProjectLink>
+          )}
+        </ProjectLinks>
       )}
     </ProjectBody>
     <div className="card-footer">

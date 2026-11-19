@@ -30,6 +30,25 @@
     "order": 2
   },
   {
+    "id": "real-time-voice-ai-assistant",
+    "title": "Real-Time Voice AI Assistant",
+    "subtitle": "Voice AI backend powering two caller-facing apps",
+    "client": "Call Ms. Beth",
+    "description": "A Django backend for an AI assistant that speaks with callers over the phone. Twilio handles calls while Django Channels streams audio to and from OpenAI Realtime. The assistant handles interruptions and searches the web for current information, with concise spoken answers that identify sources when available.",
+    "highlights": [
+      "Streamed live, bidirectional phone audio between Twilio Media Streams and OpenAI Realtime, with interruption-aware call controls.",
+      "Added live web search through the OpenAI Responses API for current questions, including news, trends, and exchange rates.",
+      "Managed subscription-based caller access, NMI billing and plan changes, usage tracking, subscription history, and per-call summaries.",
+      "Added caller-requested follow-up emails with recipient confirmation; Celery and Redis process summaries and email in the background."
+    ],
+    "links": [
+      {"label": "Call Ms. Beth", "url": "https://callmsbeth.com/"},
+      {"label": "Care Portal", "url": "https://care.callmsbeth.com/"}
+    ],
+    "tags": ["Python", "Django", "Django REST Framework", "Django Channels", "OpenAI Realtime", "OpenAI Responses", "Twilio", "Celery", "Redis", "PostgreSQL/PostGIS", "NMI", "Docker Compose"],
+    "order": 3
+  },
+  {
     "id": "3d-printer-management",
     "title": "3D Printer Management",
     "subtitle": "IoT fleet management and live monitoring",
@@ -42,7 +61,7 @@
       "Created manual and automatic print workflows, priority queues, filament tracking, macros, and actionable notifications."
     ],
     "tags": ["Next.js 14", "WebSockets", "IoT", "ApexCharts", "RBAC"],
-    "order": 3
+    "order": 4
   },
   {
     "id": "umeedbazzar",
@@ -57,7 +76,7 @@
       "Deployed Docker services with Celery and Redis for background processing and availability."
     ],
     "tags": ["Django", "Next.js SSR", "Stripe", "PayPal", "Shippo", "Docker", "Celery", "Redis"],
-    "order": 4
+    "order": 5
   },
   {
     "id": "kurd-fit",
@@ -72,7 +91,7 @@
       "Added trainer guidance subscriptions with certified coach feedback and tiered Stripe billing with webhook-based access control."
     ],
     "tags": ["Django", "Next.js", "Localization", "RTL", "Stripe", "Fitness"],
-    "order": 5
+    "order": 6
   },
   {
     "id": "trish",
@@ -88,7 +107,7 @@
       "Integrated OpenAI recommendations for personalized sales plays and engagement guidance."
     ],
     "tags": ["Django", "REST APIs", "OpenAI", "CRM", "Sentiment analysis"],
-    "order": 6
+    "order": 7
   },
   {
     "id": "drive-talk",
@@ -104,7 +123,7 @@
       "Optimized PostgreSQL indexes and queries for concurrent workloads."
     ],
     "tags": ["Python", "Django REST Framework", "Django Channels", "WebSockets", "PostgreSQL"],
-    "order": 7
+    "order": 8
   },
   {
     "id": "flow-it",
@@ -120,7 +139,7 @@
       "Built competition rules, score calculations, and live WebSocket updates."
     ],
     "tags": ["Python", "Django", "REST APIs", "WebSockets", "Leaderboards"],
-    "order": 8
+    "order": 9
   },
   {
     "id": "the-showroom",
@@ -135,7 +154,7 @@
       "Developed Celery-based seller payouts using bank details for accurate settlements."
     ],
     "tags": ["Django", "Marketplace", "Moyassar", "Apple Pay", "Celery"],
-    "order": 9
+    "order": 10
   },
   {
     "id": "usa-erp",
@@ -150,6 +169,6 @@
       "Managed data migration and integrations with other enterprise applications."
     ],
     "tags": ["ERP", "Finance", "Supply chain", "Data migration", "Integrations"],
-    "order": 10
+    "order": 11
   }
 ]
