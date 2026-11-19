@@ -109,6 +109,11 @@ export const CardInfo = styled.p`
   width: 100%;
   font-size: 1.45rem;
   line-height: 1.6;
+  height: 6.96rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 `;
 
 export const ExternalLinks = styled.a`

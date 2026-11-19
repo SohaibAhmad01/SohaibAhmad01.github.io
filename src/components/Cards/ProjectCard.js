@@ -1,14 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {
   CardInfo,
   HeaderThree,
   Hr,
   ProjectBody,
-  ProjectHighlights,
   ProjectKicker,
   ProjectLink,
-  ProjectLinks,
   ProjectMeta,
   ProjectVisual,
   ProjectVisualTitle,
@@ -38,35 +37,18 @@ const ProjectCard = ({item}) => (
       <HeaderThree title>{item.subtitle}</HeaderThree>
       <Hr />
     </TitleContent>
-    {(item.period || item.url || item.links?.length > 0) && (
-      <ProjectMeta>
-        {item.period}{item.period && (item.url || item.links?.length > 0) ? ' · ' : ''}
-        {item.url ? 'Project website' : item.links?.length > 0 ? 'Project links' : ''}
-      </ProjectMeta>
-    )}
+    {item.period && <ProjectMeta>{item.period}</ProjectMeta>}
     <ProjectBody>
       <CardInfo>{item.description}</CardInfo>
-      <ProjectHighlights>
-        {item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
-      </ProjectHighlights>
-      {(item.url || item.links?.length > 0) && (
-        <ProjectLinks>
-          {item.links?.length > 0 ? item.links.map((link) => (
-            <ProjectLink key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
-              {link.label} ↗
-            </ProjectLink>
-          )) : (
-            <ProjectLink href={item.url} target="_blank" rel="noopener noreferrer">
-              Visit project ↗
-            </ProjectLink>
-          )}
-        </ProjectLinks>
-      )}
+      <Link href={`/projects/${item.id}`} passHref>
+        <ProjectLink aria-label={`See details for ${item.title}`}>See details →</ProjectLink>
+      </Link>
     </ProjectBody>
     <div className="card-footer">
       <TitleContent style={{marginTop: '1.6rem'}}><b>Stack</b></TitleContent>
       <TagList>
-        {item.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+        {item.tags.slice(0, 4).map((tag) => <Tag key={tag}>{tag}</Tag>)}
+        {item.tags.length > 4 && <Tag>+{item.tags.length - 4} more</Tag>}
       </TagList>
     </div>
   </motion.article>

@@ -7,6 +7,7 @@ import profile from '../../../data/profile.json';
 
 const Header = () => {
   const { route } = useRouter();
+  const sectionHref = (section) => route === '/' ? `#${section}` : `/#${section}`;
 
   return (
     <HeaderContainer sticky>
@@ -20,22 +21,22 @@ const Header = () => {
       </Div1>
       <Div2>
         <li>
-          <Link href={route === '/all-projects' ? "/#about" : '#about'}>
+          <Link href={sectionHref('about')}>
             <NavLink>About</NavLink>
           </Link>
         </li>
         <li>
-          <Link href="#projects">
+          <Link href={sectionHref('projects')}>
             <NavLink>Projects</NavLink>
           </Link>
         </li>
         <li>
-          <Link href={route === '/all-projects' ? '/#approach' : '#approach'}>
+          <Link href={sectionHref('approach')}>
             <NavLink>Approach</NavLink>
           </Link>
         </li>
         <li>
-          <Link href={route === '/all-projects' ? "/#tech" : '#tech'}>
+          <Link href={sectionHref('tech')}>
             <NavLink>Skills</NavLink>
           </Link>
         </li>
