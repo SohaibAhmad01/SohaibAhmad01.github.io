@@ -12,7 +12,7 @@ import {
 } from './HeroStyles';
 
 const Hero = () => (
-  <Section>
+  <Section id="overview">
     <HeroLayout>
       <LeftSection>
         <HeroEyebrow>{profile.role} · {profile.location}</HeroEyebrow>

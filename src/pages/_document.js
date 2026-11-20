@@ -52,7 +52,6 @@ export default class MyDocument extends Document {
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:title" content={`${profile.name} | ${profile.role}`} />
           <meta name="twitter:description" content={profile.siteDescription} />
-          <title>{`${profile.name} | ${profile.role}`}</title>
         </Head>
 
         <body>

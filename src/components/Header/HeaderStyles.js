@@ -15,6 +15,13 @@ export const HeaderContainer = styled.header`
      grid-template-columns: 1fr;
      row-gap: 0.8rem;
    }
+
+   @media ${(props) => props.theme.breakpoints.sm} {
+     display: flex;
+     justify-content: flex-start;
+     padding: 0.9rem 0;
+     border-bottom: 1px solid rgba(127, 127, 127, 0.16);
+   }
 `;
 
 export const Div1 = styled.div`
@@ -28,6 +35,11 @@ export const BrandLink = styled.a`
   align-items: center;
   gap: 0.8rem;
   min-width: 0;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    gap: 0.9rem;
+    max-width: 100%;
+  }
 `;
 
 export const BrandAvatar = styled.img`
@@ -74,6 +86,10 @@ export const Div2 = styled.ul`
     flex-wrap: wrap;
     gap: 0.25rem clamp(0.5rem, 2vw, 1.2rem);
   }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: none;
+  }
 `;
 
 // Navigation Links
@@ -91,5 +107,11 @@ export const NavLink = styled.a`
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.25rem;
     font-size: 1.35rem;
+  }
+`;
+
+export const MobileHeaderSocial = styled.div`
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: none;
   }
 `;

@@ -34,7 +34,7 @@ const ProjectCard = ({item}) => (
       <ProjectVisualTitle>{item.title}</ProjectVisualTitle>
     </ProjectVisual>
     <TitleContent>
-      <HeaderThree title>{item.subtitle}</HeaderThree>
+      <HeaderThree $title>{item.subtitle}</HeaderThree>
       <Hr />
     </TitleContent>
     {item.period && <ProjectMeta>{item.period}</ProjectMeta>}

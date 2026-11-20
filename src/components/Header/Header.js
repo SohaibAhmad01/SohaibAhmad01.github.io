@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import SocialMedia from "../SocialMedia/SocialMedia.component";
-import {HeaderContainer, Div1, Div2, NavLink, BrandLink, BrandAvatar, BrandName} from './HeaderStyles';
+import {HeaderContainer, Div1, Div2, NavLink, BrandLink, BrandAvatar, BrandName, MobileHeaderSocial} from './HeaderStyles';
 import profile from '../../../data/profile.json';
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
         <Link href="/">
           <BrandLink aria-label={`${profile.name} home`}>
             <BrandAvatar src={profile.portrait} alt="" />
-            <BrandName>@{profile.name.replace(' ', '_').toUpperCase()}</BrandName>
+            <BrandName>@{profile.name.replace(' ', '_').toLowerCase()}</BrandName>
           </BrandLink>
         </Link>
       </Div1>
@@ -41,7 +41,9 @@ const Header = () => {
           </Link>
         </li>
       </Div2>
-      <SocialMedia />
+      <MobileHeaderSocial>
+        <SocialMedia />
+      </MobileHeaderSocial>
     </HeaderContainer>
   )
 };

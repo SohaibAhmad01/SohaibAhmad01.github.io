@@ -9,7 +9,7 @@ export const FooterWrapper = styled.footer`
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 
   @media ${props => props.theme.breakpoints.sm} {
-    padding: 2rem 0;
+    display: none;
   }
 `
 

@@ -6,8 +6,7 @@ export const ScrollToTopWrapper = styled.div`
   right: 3rem;
 
   @media ${(props) => props.theme.breakpoints.sm}{
-    bottom: 1.5.rem;
-    right: 1.5rem;
+    display: none;
   }
 `
 

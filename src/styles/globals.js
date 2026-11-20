@@ -124,6 +124,10 @@ const GlobalStyles = createGlobalStyle`
     .project-card { border-radius: 10px; }
   }
 
+  @media screen and (max-width: 640px) {
+    main.mobile-app-web-content { display: none; }
+  }
+
 `;
 
 export default GlobalStyles;

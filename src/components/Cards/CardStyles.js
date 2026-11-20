@@ -100,7 +100,7 @@ export const HeaderThree = styled.h3`
   color: ${props => props.theme.colors.primary1};
   background: none;
   padding: 1.5rem 0 .5rem;
-  font-size: ${(props) => props.title ? '2rem' : '1.8rem'};
+  font-size: ${(props) => props.$title ? '2rem' : '1.8rem'};
   -webkit-text-fill-color: unset;
   -webkit-background-clip: unset;
 `;
